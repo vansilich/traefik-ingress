@@ -1,6 +1,0 @@
-# Dynamic configuration
-
-tls:
-  certificates:
-    - certFile: /etc/traefik/certs/profile-fluid-line-ru-full-chain.pem
-      keyFile: /etc/traefik/certs/profile-fluid-line-ru-private-key.pem

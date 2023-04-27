@@ -1,0 +1,6 @@
+# Dynamic configuration
+
+tls:
+  certificates:
+    - certFile: /etc/traefik/certs/test.pem
+      keyFile: /etc/traefik/certs/test.pem

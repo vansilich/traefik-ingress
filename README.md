@@ -16,6 +16,7 @@ HTTP серверов на разных публичных портах (81, 82 
 ## Установка
 * `git clone git@github.com:vansilich/traefik-ingress.git`
 * `docker network create ingress_proxy`
+* `cp ./traefik/configs/dynamic/internal.example.yaml ./traefik/configs/dynamic/internal.yaml`
 * `docker compose build`
 * `docker compose up -d`
 
