@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - '80:80/tcp'
+      - '82:82/tcp'
+      - '443:443/tcp'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/certs:/etc/traefik/certs
+      - ./traefik/configs/dynamic:/etc/traefik/dynamic
+    networks: [ingress_proxy]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  ingress_proxy:
+    external: true
